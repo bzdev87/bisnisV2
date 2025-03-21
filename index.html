@@ -1,1 +1,207 @@
-# bisnisV2
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Branding - Portofolio</title>
+    <style>
+        /* Import Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Body */
+        body {
+            background: #111;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Status Bar */
+        .status-bar {
+            width: 100%;
+            background: linear-gradient(90deg, #ffcc00, #ff9900);
+            color: black;
+            padding: 10px 20px;
+            font-weight: bold;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(255, 204, 0, 0.5);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 140px 20px;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://source.unsplash.com/1920x1080/?business,success');
+            background-size: cover;
+            background-position: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            text-shadow: 2px 2px 10px rgba(255, 204, 0, 0.8);
+        }
+
+        .hero p {
+            font-size: 20px;
+            opacity: 0.9;
+        }
+
+        /* Biografi */
+        .biografi {
+            padding: 60px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 3px solid gold;
+            border-radius: 15px;
+            max-width: 900px;
+            margin: 50px auto;
+            box-shadow: 0 5px 15px rgba(255, 204, 0, 0.5);
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .biografi h2 {
+            font-size: 36px;
+            color: gold;
+        }
+
+        .biografi ul {
+            text-align: left;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .biografi ul li {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* CTA Button */
+        .cta {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 18px;
+            color: black;
+            background: gold;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .cta:hover {
+            background: #ff9900;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            padding: 20px;
+            background: linear-gradient(90deg, #ffcc00, #ff9900);
+            color: black;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Status Bar -->
+    <div class="status-bar">
+        <div id="status-time">Memuat...</div>
+        <div id="battery-status">🔋 100%</div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Personal Branding Profesional</h1>
+        <p>Membangun Karier & Bisnis yang Berpengaruh!</p>
+        <a href="#biografi" class="cta">Pelajari Lebih Lanjut</a>
+    </section>
+
+    <!-- Biografi -->
+    <section class="biografi" id="biografi">
+        <h2>Siapa Saya?</h2>
+        <p>Saya adalah seorang pengusaha muda dengan keahlian di bidang digital marketing, strategi bisnis, dan branding online.</p>
+        
+        <p>Dengan pengalaman bertahun-tahun dalam dunia digital, saya telah membantu berbagai bisnis berkembang pesat.</p>
+
+        <p>Berikut beberapa layanan yang saya tawarkan:</p>
+        <ul>
+            <li>📈 Strategi Digital Marketing yang Efektif</li>
+            <li>🌍 Optimasi SEO & Website Berbasis Data</li>
+            <li>📊 Manajemen Iklan & Facebook Ads Profesional</li>
+            <li>🖋 Copywriting yang Meningkatkan Penjualan</li>
+            <li>🎨 Desain Branding yang Unik & Berkelas</li>
+        </ul>
+
+        <a href="mailto:jawirjago0@gmail.com" class="cta">Hubungi Saya</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>📧 Email: <a href="mailto:jawirjago0@gmail.com">jawirjago0@gmail.com</a></p>
+        <p>📱 WhatsApp: <a href="https://wa.me/6287825946251">+62 878-2594-6251</a></p>
+        <p>📷 Instagram: <a href="https://www.instagram.com/dash1.id">@dash1.id</a> | <a href="https://www.instagram.com/mletre_g4nk">@mletre_g4nk</a></p>
+    </footer>
+
+    <script>
+        // Update Waktu Real-Time
+        function updateTime() {
+            const now = new Date();
+            const options = { 
+                weekday: 'long', 
+                day: 'numeric', 
+                month: 'long', 
+                year: 'numeric', 
+                hour: '2-digit', 
+                minute: '2-digit', 
+                second: '2-digit' 
+            };
+            document.getElementById('status-time').innerText = now.toLocaleDateString('id-ID', options);
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        // Update Status Baterai
+        if ('getBattery' in navigator) {
+            navigator.getBattery().then(battery => {
+                function updateBattery() {
+                    document.getElementById('battery-status').innerText = `🔋 ${Math.round(battery.level * 100)}% ${battery.charging ? '⚡ Mengisi' : ''}`;
+                }
+                battery.addEventListener('chargingchange', updateBattery);
+                battery.addEventListener('levelchange', updateBattery);
+                updateBattery();
+            });
+        }
+    </script>
+
+</body>
+</html>
